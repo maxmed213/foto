@@ -20,6 +20,7 @@ function App() {
   const [pagesItem, setPagesItem] = React.useState(2)//Колличество страниц
 
   React.useEffect(() => {
+    setPagesItem(2)
     setIsLoading(true)//Отображение страницы загрузки
     fetch(`https://63a9ab387d7edb3ae6146359.mockapi.io/Fotos?page=${page}&limit=8&${pages}`)//Получение данных с Mockapi.io (Предварительно создаём свою БД)
       .then(res => res.json())//Преобразовываем полученную информацию в json файл
